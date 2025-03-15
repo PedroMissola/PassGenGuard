@@ -1,113 +1,135 @@
-# PassGenGuard  - Sistema de Geração de Senhas
+# PassGenGuard - Sistema de Geração de Senhas
 
-**PassGenGuard** é uma ferramenta que permite gerar e verificar senhas baseadas em uma fórmula personalizada. A senha gerada é composta por informações fixas (como país, estado, cidade e data de nascimento) e alguns cálculos matemáticos simples para garantir segurança.
-
-### 🛠️ **Como Funciona?**
-Este sistema cria senhas de **8 a 16 caracteres**, baseadas em dados pessoais e um conjunto de regras matemáticas:
-
-1. **Entradas**:
-    - **País** (ex: Brasil)
-    - **Estado** (ex: São Paulo)
-    - **Cidade** (ex: Campinas)
-    - **Data de Nascimento** (ex: 26/06/2006)
-    - **Uso** (ex: número 2, para indicar o tipo de uso da senha)
-
-2. **Cálculos**:
-    - A senha é gerada usando os tamanhos dos nomes dos campos e a **data de nascimento**.
-    - O último dígito da senha é baseado na **soma** e **subtração** de alguns valores numéricos.
-
-3. **Validação**:
-    - O sistema também permite verificar se uma senha gerada segue as **regras de criação**.
-    - Verifica se os últimos dois dígitos correspondem corretamente aos cálculos da soma e subtração.
+**PassGenGuard** é uma ferramenta avançada que gera senhas utilizando uma fórmula ofuscada e complexa. A senha é derivada de dados pessoais (país, estado, cidade, data de nascimento e um valor de uso) combinados com operações matemáticas não-lineares, que incluem exponenciação, logaritmos, funções trigonométricas e arredondamentos. Essa complexidade dificulta a engenharia reversa e aumenta a segurança sem armazenar dados sensíveis.
 
 ---
 
-## 🔐 **Funcionalidades**
+## 🛠️ Como Funciona
 
-- **Geração de Senhas**: A partir de dados simples, a senha é gerada e fica pronta para uso.
-- **Validação de Senha**: Permite verificar se uma senha gerada está de acordo com a fórmula.
-- **Fórmula Customizável**: Você pode alterar as variáveis e adaptá-las à sua necessidade, mantendo a estrutura de segurança.
+O sistema cria senhas com exatamente **12 caracteres** a partir dos seguintes passos:
+
+1. **Entradas**  
+   - **País** (ex.: Brasil)  
+   - **Estado** (ex.: São Paulo)  
+   - **Cidade** (ex.: Campinas)  
+   - **Data de Nascimento** (ex.: 2006-06-26)  
+   - **Uso** (um número que indica o tipo de uso da senha)
+
+2. **Cálculos Avançados**  
+   A senha é gerada através de uma série de operações matemáticas avançadas:  
+   - Conversão dos caracteres em códigos numéricos  
+   - Aplicação de funções exponenciais, logarítmicas e trigonométricas  
+   - Geração de valores ofuscados e variações aleatórias  
+   
+   O resultado final é transformado em uma senha de 12 dígitos, com partes calculadas de forma a dificultar a compreensão do algoritmo.
+
+3. **Execução Local**  
+   Todas as operações são realizadas localmente no navegador, sem armazenamento dos dados inseridos.
 
 ---
 
-## 🖥️ **Como Usar**
+## 🔐 Funcionalidades
+
+- **Geração de Senhas Ofuscadas:** Cria senhas complexas e difíceis de decifrar a partir de dados simples.
+- **Segurança Local:** Não armazena dados sensíveis, garantindo privacidade total.
+- **Fórmula Customizável:** A lógica pode ser adaptada conforme as necessidades, mantendo o equilíbrio entre complexidade e desempenho.
+
+---
+
+## 🖥️ Como Usar
 
 1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/seuusuario/SecurePassGen.git
-   cd SecurePassGen
+   git clone https://github.com/seuusuario/PassGenGuard.git
+   cd PassGenGuard
    ```
 
-2. **Abra o arquivo `index.html`** em seu navegador para visualizar a interface de geração e verificação de senhas.
+2. **Abra o arquivo `index.html`**  
+   Visualize a interface de geração de senhas em seu navegador.
 
-3. **Preencha os dados**:
-    - País
-    - Estado
-    - Cidade
-    - Data de Nascimento
-    - Tipo de Uso
+3. **Preencha os Dados**  
+   Insira as informações solicitadas: País, Estado, Cidade, Data de Nascimento e o valor de Uso.
 
-4. **Clique em "Gerar Senha"** e a senha será automaticamente criada com base nos dados inseridos.
+4. **Clique em "Gerar Senha"**  
+   A senha será gerada automaticamente com base nos cálculos avançados.
 
 ---
 
-## 🚀 **Tecnologias Usadas**
+## 🚀 Tecnologias Utilizadas
 
-- **HTML5** – Estruturação do conteúdo e interface de usuário.
-- **JavaScript** – Lógica para a geração e verificação das senhas.
-- **CSS** – Estilização básica da interface.
-
----
-
-## 📋 **Exemplo de Senha Gerada**
-
-Aqui está um exemplo de como a senha gerada pode ficar:
-
-- **Entrada**: País = Brasil, Estado = São Paulo, Cidade = Campinas, Data de Nascimento = 26/06/2006, Uso = 2
-- **Senha Gerada**: `26062031` (baseado em cálculos e dados de entrada).
+- **HTML5:** Estrutura e interface do usuário.
+- **JavaScript:** Lógica para a geração da senha com cálculos complexos.
+- **CSS:** Estilização da interface.
 
 ---
 
-## 🔧 **Como Funciona a Lógica de Geração de Senha**
+## 📋 Exemplo de Senha Gerada
 
-1. **Dados de Entrada**: O sistema usa o **tamanho dos nomes** dos campos de entrada (como País, Estado e Cidade) e a **Data de Nascimento**.
+- **Entradas:**  
+  País: Brasil  
+  Estado: São Paulo  
+  Cidade: Campinas  
+  Data de Nascimento: 2006-06-26  
+  Uso: 2
 
-2. **Cálculos Matemáticos**:
-    - **Soma**: O tamanho do nome do país, estado e cidade.
-    - **Subtração**: A diferença entre o tamanho do nome do país, estado e cidade.
-    - **Últimos Dois Dígitos**: A senha final contém os dois últimos dígitos baseados na soma e subtração.
-
-3. **Validação**: A senha é validada verificando se os últimos dois dígitos correspondem corretamente aos cálculos realizados.
-
----
-
-## 🛡️ **Segurança**
-
-- **Não armazena dados sensíveis**: O sistema não armazena as informações pessoais, apenas usa os dados para gerar senhas localmente no navegador.
-- **Fórmula Personalizada**: A fórmula de criação de senhas é baseada em dados simples e uma lógica matemática básica, garantindo senhas únicas e difíceis de serem adivinhadas sem as entradas corretas.
+- **Senha Gerada:**  
+  Exemplo: `482937164058`  
+  *(A senha real varia conforme os dados e os cálculos internos.)*
 
 ---
 
-## ⚙️ **Contribuindo**
+## 🔧 Lógica de Geração
 
-Se você deseja contribuir com melhorias ou correções, siga os seguintes passos:
+1. **Processamento dos Dados:**  
+   Os caracteres dos campos são convertidos em códigos numéricos e manipulados com funções matemáticas avançadas.
 
-1. **Faça um Fork** deste repositório.
-2. **Crie uma branch** para a sua melhoria (`git checkout -b minha-melhora`).
-3. **Commit suas alterações** (`git commit -am 'Adicionando nova funcionalidade'`).
-4. **Push para o repositório** (`git push origin minha-melhora`).
-5. **Abra um Pull Request**.
+2. **Operações Complexas:**  
+   São aplicados cálculos envolvendo exponenciação, logaritmos, funções trigonométricas e arredondamentos para produzir um valor final ofuscado.
 
----
-
-## 📑 **Licença**
-
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+3. **Formatação Final:**  
+   O resultado é combinado com variações aleatórias para formar uma senha com 12 dígitos, garantindo maior segurança.
 
 ---
 
-## 📈 **Badges**
+## 🛡️ Segurança
 
-![GitHub contributors](https://img.shields.io/github/contributors/seuusuario/SecurePassGen?color=green)
-![GitHub issues](https://img.shields.io/github/issues/seuusuario/SecurePassGen)
-![GitHub stars](https://img.shields.io/github/stars/seuusuario/SecurePassGen?color=yellow)
+- **Privacidade:**  
+  Todas as operações são realizadas localmente; nenhum dado pessoal é armazenado.
+
+- **Complexidade Ofuscada:**  
+  A fórmula avançada torna a senha única e muito difícil de ser reproduzida sem os dados corretos.
+
+---
+
+## ⚙️ Contribuindo
+
+Se você deseja contribuir para o PassGenGuard:
+
+1. **Faça um Fork** do repositório.
+2. **Crie uma Branch** para sua melhoria:
+   ```bash
+   git checkout -b minha-melhora
+   ```
+3. **Commit suas Alterações:**
+   ```bash
+   git commit -am 'Adicionando nova funcionalidade'
+   ```
+4. **Envie para o Repositório:**
+   ```bash
+   git push origin minha-melhora
+   ```
+5. **Abra um Pull Request.**
+
+---
+
+## 📑 Licença
+
+Este projeto está sob a licença **MIT**. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+---
+
+## 📈 Badges
+
+![GitHub contributors](https://img.shields.io/github/contributors/seuusuario/PassGenGuard?color=green)  
+![GitHub issues](https://img.shields.io/github/issues/seuusuario/PassGenGuard)  
+![GitHub stars](https://img.shields.io/github/stars/seuusuario/PassGenGuard?color=yellow)
