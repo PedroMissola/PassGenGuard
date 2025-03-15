@@ -1,6 +1,6 @@
 # PassGenGuard  - Sistema de Geração de Senhas
 
-**PassGenGuard ** é uma ferramenta que permite gerar e verificar senhas baseadas em uma fórmula personalizada. A senha gerada é composta por informações fixas (como país, estado, cidade e data de nascimento) e alguns cálculos matemáticos simples para garantir segurança.
+**PassGenGuard** é uma ferramenta que permite gerar e verificar senhas baseadas em uma fórmula personalizada. A senha gerada é composta por informações fixas (como país, estado, cidade e data de nascimento) e alguns cálculos matemáticos simples para garantir segurança.
 
 ### 🛠️ **Como Funciona?**
 Este sistema cria senhas de **8 a 16 caracteres**, baseadas em dados pessoais e um conjunto de regras matemáticas:
