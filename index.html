@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="shortcut icon" href="padlock.png" type="image/x-icon">
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <header>
+        <h1>GERADOR DE SENHAS</h1>
+    </header>
+    <form id="dados" method="get">
+        <label for="pais">Pais:</label>
+        <input type="text" name="pais" placeholder="Insira seu Pais">
+
+        <label for="estado">Estado: </label>
+        <input type="text" name="estado" placeholder="Insira seu Estado">
+
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" placeholder="Insira sua Cidade">
+
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" name="nascimento" placeholder="Data de nascimento">
+
+        <label for="uso">Tipo de uso</label>
+        <select id="uso" name="uso">
+            <option value="1">Sites</option>
+            <option value="2">Senhas para aparelhos</option>
+            <option value="3">Contas</option>
+        </select>
+
+        <button type="submit" onclick="gerarSenha()">Criar Senha</button>
+    </form>
+
+        <h3>Senha: <span id="senha"></span></h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
