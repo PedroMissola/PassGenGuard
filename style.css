@@ -22,6 +22,14 @@ header h1 {
     color: oklch(0.278 0.033 256.848);
 }
 
+header h2 {
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: oklch(0.577 0.245 27.325);
+}
+
+
 form {
     display: flex;
     flex-direction: column;
