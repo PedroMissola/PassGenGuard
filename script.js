@@ -60,7 +60,7 @@ function gerarSenha() {
     const variacoes = [var1, var2, var3, var4, var5, var6];
 
     const extras = variacoes.sort(() => 0.5 - Math.random()).slice(0, 4).join("");
-    const senhaFinal = (senhaBase + extras).padEnd(12, "0").substring(0, 12);
+    const senhaFinal = (senhaBase + extras).padEnd(4, "0").substring(0, 8);
 
     document.getElementById("senha").innerText = senhaFinal;
   });
