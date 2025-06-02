@@ -1,6 +1,6 @@
-# PassGenGuard - Sistema de Geração de Senhas
+# SafeGenerator - Sistema de Geração de Senhas
 
-**PassGenGuard** é uma ferramenta avançada que gera senhas utilizando uma fórmula ofuscada e complexa. A senha é derivada de dados pessoais (país, estado, cidade, data de nascimento e um valor de uso) combinados com operações matemáticas não-lineares, que incluem exponenciação, logaritmos, funções trigonométricas e arredondamentos. Essa complexidade dificulta a engenharia reversa e aumenta a segurança sem armazenar dados sensíveis.
+**SafeGenerator** é uma ferramenta avançada que gera senhas utilizando uma fórmula ofuscada e complexa. A senha é derivada de dados pessoais (país, estado, cidade, data de nascimento e um valor de uso) combinados com operações matemáticas não-lineares, que incluem exponenciação, logaritmos, funções trigonométricas e arredondamentos. Essa complexidade dificulta a engenharia reversa e aumenta a segurança sem armazenar dados sensíveis.
 
 ---
 
@@ -40,8 +40,8 @@ O sistema cria senhas com exatamente **12 caracteres** a partir dos seguintes pa
 
 1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/seuusuario/PassGenGuard.git
-   cd PassGenGuard
+   git clone https://github.com/seuusuario/safegenerator.git
+   cd SafeGenerator
    ```
 
 2. **Abra o arquivo `index.html`**  
@@ -103,7 +103,7 @@ O sistema cria senhas com exatamente **12 caracteres** a partir dos seguintes pa
 
 ## ⚙️ Contribuindo
 
-Se você deseja contribuir para o PassGenGuard:
+Se você deseja contribuir para o SafeGenerator:
 
 1. **Faça um Fork** do repositório.
 2. **Crie uma Branch** para sua melhoria:
@@ -130,6 +130,6 @@ Este projeto está sob a licença **MIT**. Consulte o arquivo [LICENSE](./LICENS
 
 ## 📈 Badges
 
-![GitHub contributors](https://img.shields.io/github/contributors/seuusuario/PassGenGuard?color=green)  
-![GitHub issues](https://img.shields.io/github/issues/seuusuario/PassGenGuard)  
-![GitHub stars](https://img.shields.io/github/stars/seuusuario/PassGenGuard?color=yellow)
+![GitHub contributors](https://img.shields.io/github/contributors/seuusuario/SafeGenerator?color=green)  
+![GitHub issues](https://img.shields.io/github/issues/seuusuario/SafeGenerator)  
+![GitHub stars](https://img.shields.io/github/stars/seuusuario/SafeGenerator?color=yellow)
